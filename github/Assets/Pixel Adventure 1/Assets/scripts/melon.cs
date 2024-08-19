@@ -25,6 +25,9 @@ public class melon : MonoBehaviour
             circle.enabled = false;
             collected.SetActive(true);
 
+            gamecontroller.instance.totalScore += Score;
+            gamecontroller.instance.UpdatescoreText();
+
             Destroy(gameObject, 0.25f);
         }
     }
